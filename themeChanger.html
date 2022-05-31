@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #btn {
+            background: rgb(208, 245, 108);
+            color: rgb(6, 131, 233);
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            cursor: pointer;
+            font-weight: 900;
+            position: relative;
+        }
+
+        #icon1 {
+            background: #fff;
+            color: #000;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+
+        #icon2 {
+            background: #000;
+            color: #fff;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+
+        #icon3 {
+            background: rgb(219, 205, 2);
+            color: rgb(17, 197, 41);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+
+        #icon {
+            position: absolute;
+            display: none;
+            gap: 10px;
+            padding: 10px;
+            background: rgb(86, 237, 248);
+            border-radius: 20px;
+        }
+        .icon:hover{
+            margin-top: 9px;
+        }
+        #btn:hover #icon {
+            display: flex;
+            margin-top: -48px;
+            margin-left: 50px;
+        }
+    </style>
+
+</head>
+
+<body id="theme">
+    <div class="button">
+        <button id="btn">Theme
+            <div id="icon">
+               
+                <div id="icon1" class="light icon" onclick="icon1()"> </div>
+                <div id="icon2" class="dark icon" onclick="icon2()"> </div>
+                <div id="icon3" class="orange icon" onclick="icon3()"> </div>
+
+            </div>
+        </button>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae magni reiciendis eius blanditiis,
+            tempora distinctio minima culpa voluptas dolorem. Explicabo, minus asperiores ipsa aliquam fugit
+            perspiciatis dolores, voluptatum, voluptatem iste rerum eum possimus?</p>
+    </div>
+
+
+<script>
+    var theme=document.getElementById("theme");
+    var i1=document.getElementById("icon1");
+    var i2=document.getElementById("icon2");
+    var i3=document.getElementById("icon3");
+
+    function icon1(){
+        theme.style.background="white";
+        theme.style.color="black";
+    }
+    function icon2(){
+        theme.style.background="black";
+        theme.style.color="white";
+    }
+    function icon3(){
+        theme.style.background="orange";
+        theme.style.color="black";
+    }
+
+
+</script>
+
+</body>
+
+</html>
